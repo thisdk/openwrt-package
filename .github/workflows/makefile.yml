@@ -30,6 +30,7 @@ jobs:
       - name: Start build plugin
         run: |
           cd sdk
+          make defconfig
           make package/udp2raw/compile V=s
           make package/tinyfecvpn/compile V=s
 
