@@ -24,6 +24,9 @@ jobs:
           mv immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64 sdk
           mv udp2raw sdk/package/udp2raw && mv tinyfecvpn sdk/package/tinyfecvpn/
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Start build plugin
         run: |
           cd sdk
