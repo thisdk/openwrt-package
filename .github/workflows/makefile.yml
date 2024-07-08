@@ -22,7 +22,9 @@ jobs:
           wget https://downloads.immortalwrt.org/releases/23.05.2/targets/mediatek/filogic/immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
           tar -xvf immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
           mv immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64 sdk
-          mv udp2raw sdk/package/udp2raw && mv tinyfecvpn sdk/package/tinyfecvpn/
+          mv udp2raw sdk/package/udp2raw
+          mv speederv2 sdk/package/speederv2
+          mv tinyfecvpn sdk/package/tinyfecvpn
 
       - name: Start build plugin
         run: |
