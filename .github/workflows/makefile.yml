@@ -29,6 +29,7 @@ jobs:
           cd sdk
           make defconfig
           make package/udp2raw/compile V=s
+          make package/speederv2/compile V=s
           make package/tinyfecvpn/compile V=s
 
       - uses: actions/upload-artifact@v4
