@@ -26,7 +26,6 @@ define Package/udp2raw
   TITLE:=Tunnel which turns UDP Traffic into Encrypted FakeTCP/UDP/ICMP Traffic
   URL:=https://github.com/wangyu-/udp2raw
   DEPENDS:=+libstdcpp +libpthread +librt
-  PROVIDES:=udp2raw-tunnel
 endef
 
 define Package/udp2raw/description
