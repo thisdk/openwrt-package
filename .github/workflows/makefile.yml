@@ -19,13 +19,12 @@ jobs:
 
       - name: Download unzip sdk
         run: |
-          wget https://downloads.immortalwrt.org/releases/23.05.2/targets/mediatek/filogic/immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
-          tar -xvf immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
-          mv immortalwrt-sdk-23.05.2-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64 sdk
+          wget https://downloads.immortalwrt.org/releases/23.05.3/targets/mediatek/filogic/immortalwrt-sdk-23.05.3-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
+          tar -xvf immortalwrt-sdk-23.05.3-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
+          mv immortalwrt-sdk-23.05.3-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64 sdk
           mv udp2raw sdk/package/udp2raw
           mv speederv2 sdk/package/speederv2
           mv tinyfecvpn sdk/package/tinyfecvpn
-          git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homeproxy
 
       - name: Start build plugin
         run: |
@@ -34,7 +33,6 @@ jobs:
           make package/udp2raw/compile V=s
           make package/speederv2/compile V=s
           make package/tinyfecvpn/compile V=s
-          make package/homeproxy/compile V=s
 
       - uses: actions/upload-artifact@v4
         with:
