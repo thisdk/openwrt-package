@@ -25,6 +25,7 @@ jobs:
           mv udp2raw sdk/package/udp2raw
           mv speederv2 sdk/package/speederv2
           mv tinyfecvpn sdk/package/tinyfecvpn
+          mv sing-box sdk/package/sing-box
 
       - name: Start build plugin
         run: |
