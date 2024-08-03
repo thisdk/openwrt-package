@@ -33,6 +33,7 @@ jobs:
           make package/udp2raw/compile V=s
           make package/speederv2/compile V=s
           make package/tinyfecvpn/compile V=s
+          make package/sing-box/compile V=s
 
       - uses: actions/upload-artifact@v4
         with:
