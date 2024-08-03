@@ -5,12 +5,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=sing-box
-PKG_VERSION:=1.9.3
+PKG_VERSION:=1.10.0-alpha.28
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/SagerNet/sing-box/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=ab3d321860f973151e773c0c4a1478ab31ed63d89e17c7ac618cf50b232dd1c4
+PKG_HASH:=skip
 
 PKG_LICENSE:=GPL-3.0-or-later
 PKG_LICENSE_FILES:=LICENSE
@@ -128,7 +128,6 @@ GO_PKG_TAGS:=$(subst $(space),$(comma),$(strip \
 ))
 
 define Package/sing-box/conffiles
-/etc/config/sing-box
 /etc/sing-box/
 endef
 
@@ -138,10 +137,6 @@ define Package/sing-box/install
 	$(INSTALL_DIR) $(1)/etc/sing-box
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/release/config/config.json $(1)/etc/sing-box
 
-	$(INSTALL_DIR) $(1)/etc/config/
-	$(INSTALL_CONF) ./files/sing-box.conf $(1)/etc/config/sing-box
-	$(INSTALL_DIR) $(1)/etc/init.d/
-	$(INSTALL_BIN) ./files/sing-box.init $(1)/etc/init.d/sing-box
 endef
 
 $(eval $(call GoBinPackage,sing-box))
