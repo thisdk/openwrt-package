@@ -23,8 +23,8 @@ jobs:
           tar -xvf immortalwrt-sdk-23.05.3-x86-64_gcc-12.3.0_musl.Linux-x86_64.tar.xz
           mv immortalwrt-sdk-23.05.3-x86-64_gcc-12.3.0_musl.Linux-x86_64 sdk
           cd sdk/package && git clone https://github.com/morytyann/OpenWrt-mihomo.git
-          mv -rf OpenWrt-mihomo/luci-app-mihomo ./luci-app-mihomo
-          mv -rf OpenWrt-mihomo/mihomo ./mihomo
+          mv -f OpenWrt-mihomo/luci-app-mihomo ./luci-app-mihomo
+          mv -f OpenWrt-mihomo/mihomo ./mihomo
           rm -rf OpenWrt-mihomo
 
       - name: Start build plugin
